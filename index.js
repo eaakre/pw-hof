@@ -5,6 +5,18 @@ let cardList;
 
 const navbar = document.querySelector(".header");
 const navbarHeight = navbar.offsetHeight;
+const mobileMenuButton = document.getElementById("navbarMenu");
+const mobileMenu = document.querySelector(".navbar__menu");
+
+mobileMenuButton.addEventListener("click", function () {
+  if (mobileMenu.style.display == "none") {
+    mobileMenu.style.display = "block";
+    mobileMenu.style.transform = "translateX(0)";
+  } else {
+    mobileMenu.style.display = "none";
+    mobileMenu.style.transform = "translateX(" + window.outerWidth + ")";
+  }
+});
 
 let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
