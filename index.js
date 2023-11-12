@@ -6,17 +6,21 @@ let cardList;
 const navbar = document.querySelector(".header");
 const navbarHeight = navbar.offsetHeight;
 const mobileMenuButton = document.getElementById("navbarMenu");
-const mobileMenu = document.querySelector(".navbar__menu");
+const mobileMenu = document.getElementById("navbarMenuOverlay");
+const closeBtn = document.getElementById("closeBtn");
 
-mobileMenuButton.addEventListener("click", function () {
-  if (mobileMenu.style.display == "none") {
-    mobileMenu.style.display = "block";
-    mobileMenu.style.transform = "translateX(0)";
-  } else {
-    mobileMenu.style.display = "none";
-    mobileMenu.style.transform = "translateX(" + window.outerWidth + ")";
-  }
-});
+/* Open when someone clicks on the span element */
+function openNav() {
+  mobileMenu.style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  mobileMenu.style.width = "0";
+}
+
+mobileMenuButton.addEventListener("click", openNav);
+closeBtn.addEventListener("click", closeNav);
 
 let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
