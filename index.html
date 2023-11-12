@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="players.js"></script>
+    <script src="index.js" type="module" defer></script>
+    <title>Minneapolis Miracle</title>
+  </head>
+  <body>
+    <div class="header px-5 py-2">
+      <div class="navbar__logo">
+        <img
+          src="./images/logo_ball.png"
+          alt="Hall of Fame Logo"
+          class="navbar__logo-image"
+        />
+        <p class="navbar__logo-text">PW Hall of Fame</p>
+      </div>
+      <ul class="navbar__list">
+        <li class="navbar__list-item">
+          <a href="#" class="navbar__list-link">Minneapolis Miracle</a>
+        </li>
+      </ul>
+    </div>
+    <div class="spacer"></div>
+
+    <div class="content">
+      <div class="columns is-vcentered banner m-0">
+        <div class="column banner__text-container">
+          <div class="banner__text py-2 px-5">
+            Hall of Fame inductees for the Minneapolis Miracle:
+          </div>
+        </div>
+        <div class="column py-2 px-5 is-6 banner__img">
+          <img
+            src="./images/banner.png"
+            alt="Vintage Baseball"
+            class="banner__image"
+          />
+        </div>
+      </div>
+
+      <div class="columns mt-4">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper"></div>
+        </div>
+      </div>
+
+      <div class="hitting">
+        <table class="hitting-table" id="hitting-table">
+          <thead>
+            <tr>
+              <th><button id="name">Name</button></th>
+              <th><button id="position">Pos</button></th>
+              <th><button id="games">G</button></th>
+              <th><button id="ab">AB</button></th>
+              <th><button id="hits">H</button></th>
+              <th><button id="singles">1B</button></th>
+              <th><button id="doubles">2B</button></th>
+              <th><button id="triples">3B</button></th>
+              <th><button id="hr">HR</button></th>
+              <th><button id="r">R</button></th>
+              <th><button id="rbi">RBI</button></th>
+              <th><button id="bb">BB</button></th>
+              <th><button id="k">K</button></th>
+              <!-- <th><button id="hbp">HBP</button></th>
+              <th><button id="sf">SF</button></th>
+              <th><button id="sh">SH</button></th>
+              <th><button id="buh">BUH</button></th>
+              <th><button id="ifh">IFH</button></th>
+              <th><button id="gdp">GDP</button></th>
+              <th><button id="roe">ROE</button></th> -->
+              <th><button id="sb">SB</button></th>
+              <th><button id="cs">CS</button></th>
+              <th><button id="avg">AVG</button></th>
+              <!-- <th><button id="image">Image</button></th>
+              <th><button id="link">Link</button></th> -->
+            </tr>
+          </thead>
+          <tbody id="hitting-content"></tbody>
+        </table>
+      </div>
+
+      <div class="pitching"></div>
+    </div>
+
+    <div class="footer p-5">
+      <p class="footer__text p-0">Erik Aakre 2023</p>
+    </div>
+
+    <template id="swiper__template">
+      <div class="swiper-slide">
+        <img src="" alt="" class="swiper-image" />
+        <p class="swiper-name"><a href="" class="swiper-link"></a></p>
+      </div>
+    </template>
+  </body>
+</html>
