@@ -58,6 +58,9 @@ cardList.renderItems();
 var swiper = new Swiper(".mySwiper", {
   effect: "cards",
   grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
 });
 
 // const hittingTable = document.getElementById("hitting-table");
@@ -71,7 +74,16 @@ const createRow = (obj) => {
     if (key !== "image" && key !== "link") {
       const cell = document.createElement("td");
       cell.setAttribute("data-attr", key);
-      cell.innerHTML = obj[key];
+      if (key == "name") {
+        let playerLink = document.createElement("a");
+        playerLink.setAttribute("href", obj.link);
+        playerLink.setAttribute("target", "_blank");
+        playerLink.classList.add("player-link");
+        playerLink.innerHTML = obj[key];
+        cell.appendChild(playerLink);
+      } else {
+        cell.innerHTML = obj[key];
+      }
       row.appendChild(cell);
     }
   });

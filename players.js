@@ -51,7 +51,7 @@ const batters = [
     CS: 0,
     AVG: ".260",
     image: "./images/green_logan.png",
-    link: "https://www.pennantwars.com/player.php?l=4&p=34654",
+    link: "https://www.pennantwars.com/player.php?l=4&p=38534",
   },
   {
     name: "Tyler Sanchez",
